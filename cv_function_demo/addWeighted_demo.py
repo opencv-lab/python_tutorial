@@ -8,6 +8,7 @@ img11 = img1[0:50, 0:50] # ROI
 img22 = img2[0:50, 0:50] # ROI
 
 
+# addWeighted(src1, alpha, src2, beta, gamma[, dst[, dtype]]) -> dst
 img3 = cv2.addWeighted(img11, 0.6, img22, 0.4, 0) 
 img4 = cv2.addWeighted(img11, 0.8, img22, 0.2, 0) 
 
