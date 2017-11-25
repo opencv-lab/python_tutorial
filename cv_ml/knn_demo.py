@@ -1,3 +1,8 @@
+# docs from `http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_ml/py_knn/py_knn_understanding/py_knn_understanding.html#knn-understanding`
+# but it's already update some function name in opencv 3.x
+# below code run on opencv 3.x
+
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,7 +24,10 @@ blue = trainData[responses.ravel() == 1]
 plt.scatter(blue[:, 0], blue[:,1], 90, 'b', 's')
 
 
-newcomer = np.random.randint(0, 100, (1, 2)).astype(np.float32)
+# For one comer
+# newcomer = np.random.randint(0, 100, (1, 2)).astype(np.float32)
+# For many comer
+newcomer = np.random.randint(0, 100, (10, 2)).astype(np.float32)
 plt.scatter(newcomer[:, 0], newcomer[:,1], 80, 'g', 'o')
 #knn = cv2.ml.KNearest()
 knn = cv2.ml.KNearest_create()
